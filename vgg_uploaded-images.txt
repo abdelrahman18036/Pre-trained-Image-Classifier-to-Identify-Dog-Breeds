@@ -1,0 +1,79 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                      Dog_2.jpg  label:                        dog
+ 2 key:                  Spaceship.jpg  label:                  spaceship
+ 3 key:                      Dog_1.jpg  label:                        dog
+ 4 key:                  Not_Dog_2.jpg  label:                    not dog
+{'Dog_2.jpg': ['dog'], 'Spaceship.jpg': ['spaceship'], 'Dog_1.jpg': ['dog'], 'Not_Dog_2.jpg': ['not dog']}
+
+     MATCH:
+
+ NOT A MATCH:
+
+                     Dog_2.jpg: 
+Real:                        dog   Classifier:                    plastic bag
+
+                 Spaceship.jpg: 
+Real:                  spaceship   Classifier:                     oil filter
+
+                     Dog_1.jpg: 
+Real:                        dog   Classifier:             labrador retriever
+
+                 Not_Dog_2.jpg: 
+Real:                    not dog   Classifier: indian elephant, elephas maximus
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+
+     MATCH:
+
+ NOT A MATCH:
+
+                     Dog_2.jpg: 
+Real:                        dog   Classifier:                    plastic bag  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                 Spaceship.jpg: 
+Real:                  spaceship   Classifier:                     oil filter  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                     Dog_1.jpg: 
+Real:                        dog   Classifier:             labrador retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                 Not_Dog_2.jpg: 
+Real:                    not dog   Classifier: indian elephant, elephas maximus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 0 # NOT Matches: 4
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  4 
+Pct Corr dog:  50.0 Pct Corr NOTdog:   0.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not Dog Images    :   4
+ 
+           pct_match:   0.0
+    pct_correct_dogs:  50.0
+   pct_correct_breed:   0.0
+ pct_correct_notdogs:   0.0
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                        dog   Classifier:                    plastic bag
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:             labrador retriever
+
+** Total Elapsed Runtime: 0:0:3
